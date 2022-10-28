@@ -8,17 +8,11 @@ public class PatrolBehavior : BehaviourBase
     [SerializeField] private PatrolPath patrolPath;
 
     private Vector3 currentPatrolTarget;
-    private int currentPatrolIndex;
-    private int pathDirection;
+    private int currentPatrolIndex = -1;
+    private int pathDirection = 1;
 
     private CharacterAgent characterAgent;
     private bool isActive;
-
-    void Start()
-    {
-        currentPatrolIndex = -1;
-        pathDirection = 1;
-    }
 
     void Update()
     {
