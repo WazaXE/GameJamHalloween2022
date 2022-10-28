@@ -21,7 +21,7 @@ public class CharacterAgent : MonoBehaviour {
     private bool reachedDestination = false;
     private EOffmeshLinkStatus offmeshLinkStatus = EOffmeshLinkStatus.NotStarted;
 
-    void Start() {
+    void OnEnable() {
         agent = GetComponent<NavMeshAgent>();
     }
 
