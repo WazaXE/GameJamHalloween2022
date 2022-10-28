@@ -22,7 +22,7 @@ public class PathBuilder : MonoBehaviour
         Debug.Log("Path Constructed");
     }
 
-    private void OnDrawGizmosSelected() {
+    private void OnDrawGizmos() {
         for (int i = 0; i < transform.childCount - 1; i++) {
             Gizmos.color = Color.blue;
             Gizmos.DrawSphere(transform.GetChild(i).position, 0.2f);
