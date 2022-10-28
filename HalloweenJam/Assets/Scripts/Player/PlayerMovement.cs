@@ -22,28 +22,22 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        Vector2 movementVector = new Vector3(
+        Vector2 movementDirection = new Vector2(
             Input.GetAxis("Horizontal"),
             Input.GetAxis("Vertical")
         );
-        if (movementVector.magnitude > 1) {
-            movementVector = movementVector.normalized;
+        if (movementDirection.magnitude > 1) {
+            movementDirection = movementDirection.normalized;
         }
-        Move(movementVector);
-        Rotate(movementVector);
+
+        Move(new Vector3(movementDirection.x, 0, movementDirection.y));
+        Rotate(movementDirection);
     }
 
     private void Move(Vector3 direction) {
-        Vector2 movementVector = new Vector3(
-            Input.GetAxis("Horizontal"),
-            Input.GetAxis("Vertical")
-        );
-        if (movementVector.magnitude > 1) {
-            movementVector = movementVector.normalized * movementSpeed * Time.deltaTime;
-        }
-        else {
-            movementVector *= movementSpeed * Time.deltaTime;
-        }
+        Vector3 movement = direction * movementSpeed * Time.deltaTime;
+        Vector3 pos = transform.position + movement;
+        rb.MovePosition(pos);
 
         // movement event
         if (!isMoving && direction.sqrMagnitude > 0) {
@@ -56,7 +50,12 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    private void Rotate(Vector3 direction) {
-
+    static float ROTATION_OFFSET = 90;
+    private void Rotate(Vector2 direction) {
+        if (direction.sqrMagnitude > 0) {
+            float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg - ROTATION_OFFSET;
+            Quaternion q = Quaternion.AngleAxis(angle, Vector3.down);
+            gfx.transform.rotation = Quaternion.Slerp(gfx.transform.rotation, q, Time.deltaTime * rotationSpeed);
+        }
     }
 }
