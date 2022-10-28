@@ -97,7 +97,6 @@ public class CharacterAgent : MonoBehaviour {
 
     public virtual void MoveTo(Vector3 destination) {
         CancelCurrentCommand();
-        Debug.Log("Got destination" + destination);
         SetDestination(destination);
     }
 

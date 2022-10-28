@@ -24,7 +24,7 @@ public class EnemyBehaviourHandler : MonoBehaviour, ITarget, IVisionReport
         DetectableTargetManager.Instance.DeregisterTarget(this);
     }
 
-    public void ReportCanSeeTarget(ITarget target) {
+    public void ReportCanSeeTarget() {
         SwitchBehaviour(followBehaviour);
         Debug.Log("Can see target!");
     }
@@ -32,7 +32,7 @@ public class EnemyBehaviourHandler : MonoBehaviour, ITarget, IVisionReport
         SwitchBehaviour(patrolBehaviour);
         Debug.Log("Lost target!");
     }
-    public void ReportIsInAttackRange(ITarget target) {
+    public void ReportIsInAttackRange() {
         SwitchBehaviour(attackBehaviour);
         Debug.Log("Attack target!");
     }

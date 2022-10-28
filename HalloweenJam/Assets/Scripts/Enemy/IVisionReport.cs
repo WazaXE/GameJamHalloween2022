@@ -4,7 +4,7 @@ using UnityEngine;
 
 public interface IVisionReport
 {
-    public void ReportCanSeeTarget(ITarget target);
+    public void ReportCanSeeTarget();
     public void ReportLostTarget();
-    public void ReportIsInAttackRange(ITarget target);
+    public void ReportIsInAttackRange();
 }

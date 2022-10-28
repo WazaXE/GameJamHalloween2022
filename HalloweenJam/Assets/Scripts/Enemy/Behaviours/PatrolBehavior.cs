@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(EnemyBehaviourHandler))]
+[RequireComponent(typeof(CharacterAgent))]
 public class PatrolBehavior : BehaviourBase
 {
     [SerializeField] private PatrolPath patrolPath;
@@ -31,6 +32,7 @@ public class PatrolBehavior : BehaviourBase
     }
 
     public override void EndBehaviour() {
+        characterAgent.CancelCurrentCommand();
         characterAgent = null;
         isActive = false;
     }

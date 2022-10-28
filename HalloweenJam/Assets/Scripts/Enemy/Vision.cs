@@ -8,26 +8,59 @@ public class Vision : MonoBehaviour
     [SerializeField] private float visionRange;
     [SerializeField] private float visionAngle;
     [SerializeField] private float attackRange;
+    [Space(15)]
+    [SerializeField] private float targetAwarenessDecayRate;
 
-    IVisionReport behaviourHandler;
+    private IVisionReport behaviourHandler;
+    private ITarget self;
+
+    private ITarget identifiedTarget;
+    private float awareness;
+
+    public ITarget IdentifiedTarget => identifiedTarget;
 
     void Start()
     {
-        behaviourHandler = GetComponent<EnemyBehaviourHandler>();
+        EnemyBehaviourHandler ebh = GetComponent<EnemyBehaviourHandler>();
+        behaviourHandler = ebh;
+        self = ebh;
     }
 
     private void Update() {
+        FindBestTarget();
+    }
+
+    private void FindBestTarget() {
         for (int i = 0; i < DetectableTargetManager.Instance.detectableTargets.Count; i++) {
             ITarget target = DetectableTargetManager.Instance.detectableTargets[i];
-            if (target == behaviourHandler) continue;
-            if (!IsInRange(target.Position.position, visionRange)) continue;
-            if (!IsInViewArea(target.Position.position)) continue;
+            if (!ValidTarget(target)) continue;
 
-            behaviourHandler.ReportCanSeeTarget(target);
-            if(IsInRange(target.Position.position, attackRange)) {
-                behaviourHandler.ReportIsInAttackRange(target);
+            identifiedTarget = target;
+            awareness = 2f;
+
+            behaviourHandler.ReportCanSeeTarget();
+            if (IsInRange(target.Position.position, attackRange)) {
+                behaviourHandler.ReportIsInAttackRange();
             }
         }
+
+        if (identifiedTarget != null && !ValidTarget(identifiedTarget)) {
+            if(awareness <= 0) {
+                behaviourHandler.ReportLostTarget();
+                identifiedTarget = null;
+            }
+            else {
+                awareness -= targetAwarenessDecayRate * Time.deltaTime;
+            }
+        }
+    }
+
+    private bool ValidTarget(ITarget t) {
+        if (t.Faction == self.Faction) return false;
+        if (!IsInRange(t.Position.position, visionRange)) return false;
+        if (!IsInViewArea(t.Position.position)) return false;
+
+        return true;
     }
 
     private bool IsInRange(Vector3 target, float range) {
