@@ -94,6 +94,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   faction: 0
+  animator: {fileID: 448149330959796945}
 --- !u!1 &2946716628532893580
 GameObject:
   m_ObjectHideFlags: 0
@@ -195,6 +196,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 481a2f07f5fb776488275781469c11b8, type: 3}
+--- !u!95 &448149330959796945 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 8615978844785928184, guid: 481a2f07f5fb776488275781469c11b8,
+    type: 3}
+  m_PrefabInstance: {fileID: 8190427510426496297}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &813498815268668914 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8854110616336771291, guid: 481a2f07f5fb776488275781469c11b8,
