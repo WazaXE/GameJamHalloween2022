@@ -30,13 +30,23 @@ public class PlayerMovement : MonoBehaviour
             movementDirection = movementDirection.normalized;
         }
 
-        Move(new Vector3(movementDirection.x, 0, movementDirection.y));
-        Rotate(movementDirection);
+        Vector2 cameraRelativeMovement = GetCameraRelativeMovement(movementDirection);
+
+        Move(cameraRelativeMovement);
+        Rotate(cameraRelativeMovement);
     }
 
-    private void Move(Vector3 direction) {
-        Vector3 movement = direction * movementSpeed * Time.deltaTime;
-        Vector3 pos = transform.position + movement;
+    private void Move(Vector2 direction) {
+        Vector3 cameraForward = Camera.main.transform.forward;
+        Vector3 cameraRight = Camera.main.transform.right;
+
+        cameraForward.y = 0;
+        cameraRight.y = 0;
+        cameraForward.Normalize();
+        cameraRight.Normalize();
+
+        Vector3 movement = new Vector3(direction.x, 0, direction.y);
+        Vector3 pos = transform.position + movement * movementSpeed * Time.deltaTime;
         rb.MovePosition(pos);
 
         // movement event
@@ -48,6 +58,19 @@ public class PlayerMovement : MonoBehaviour
             isMoving = false;
             PlayerMoving?.Invoke(false);
         }
+    }
+
+    private Vector2 GetCameraRelativeMovement(Vector2 movementDirection) {
+        Vector3 cameraForward = Camera.main.transform.forward;
+        Vector3 cameraRight = Camera.main.transform.right;
+
+        cameraForward.y = 0;
+        cameraRight.y = 0;
+        cameraForward.Normalize();
+        cameraRight.Normalize();
+
+        Vector3 movement = cameraForward * movementDirection.y + cameraRight * movementDirection.x;
+        return new Vector2(movement.x, movement.z);
     }
 
     static float ROTATION_OFFSET = 90;
