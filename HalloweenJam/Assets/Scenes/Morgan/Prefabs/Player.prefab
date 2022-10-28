@@ -93,8 +93,9 @@ GameObject:
   m_Component:
   - component: {fileID: 2946716627900076770}
   - component: {fileID: 2946716627900076775}
-  - component: {fileID: 2946716627900076768}
   - component: {fileID: 2946716627900076769}
+  - component: {fileID: 2946716627900076768}
+  - component: {fileID: 7570327065997541311}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -134,6 +135,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!136 &2946716627900076769
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2946716627900076771}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &2946716627900076768
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -149,20 +164,19 @@ MonoBehaviour:
   movementSpeed: 15
   rotationSpeed: 5
   gfx: {fileID: 2946716628532893571}
---- !u!136 &2946716627900076769
-CapsuleCollider:
+--- !u!114 &7570327065997541311
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2946716627900076771}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55834da0b5b6d7e429d7a3106d17be4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  faction: 0
 --- !u!1 &2946716627998793953
 GameObject:
   m_ObjectHideFlags: 0
