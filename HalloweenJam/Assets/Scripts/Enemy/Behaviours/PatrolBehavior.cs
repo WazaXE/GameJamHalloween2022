@@ -36,8 +36,8 @@ public class PatrolBehavior : BehaviourBase
     }
 
     private void GetClosesPatrolPoint() {
-        Vector3 nearest = Vector3.negativeInfinity;
-        float nearestDist = float.PositiveInfinity;
+        Vector3 nearest = patrolPath.PatrolPoints[0];
+        float nearestDist = 0;
         int nearestIndex = -1;
 
         for (int i = 0; i < patrolPath.PatrolPoints.Length; i++) {
@@ -60,7 +60,6 @@ public class PatrolBehavior : BehaviourBase
         }
 
         if(!patrolPath.IsLoop) {
-            Debug.Log("wat");
             int tempIndex = currentPatrolIndex + pathDirection;
             if (tempIndex < 0 || tempIndex >= patrolPath.PatrolPoints.Length) {
                 pathDirection *= -1;
