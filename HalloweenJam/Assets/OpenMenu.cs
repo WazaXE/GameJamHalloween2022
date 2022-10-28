@@ -5,6 +5,7 @@ using UnityEngine;
 public class OpenMenu : MonoBehaviour
 {
     [SerializeField] private GameObject pauseMenu;
+    [SerializeField] private GameObject upgradeMenu;
 
     // Start is called before the first frame update
     void Start()
@@ -21,6 +22,11 @@ public class OpenMenu : MonoBehaviour
                 break;
             case GameState.Paused:
                 pauseMenu.SetActive(true);
+                upgradeMenu.SetActive(false);
+                break;
+            case GameState.Upgrade:
+                upgradeMenu.SetActive(true);
+                pauseMenu.SetActive(false);
                 break;
         }
 

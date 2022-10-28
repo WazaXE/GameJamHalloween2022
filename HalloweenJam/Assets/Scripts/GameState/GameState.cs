@@ -4,5 +4,6 @@ using UnityEngine;
 
 public enum GameState {
     Gameplay,
-    Paused
+    Paused,
+    Upgrade
 }
