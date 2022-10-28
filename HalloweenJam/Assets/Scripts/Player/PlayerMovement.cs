@@ -12,12 +12,14 @@ public class PlayerMovement : MonoBehaviour
 
     private Rigidbody rb;
     private bool isMoving;
+    private bool isPaused;
 
     public UnityAction<bool> PlayerMoving;
 
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        GameStateManager.Instance.OnGameStateChange += OnGameStateChange;
     }
 
     void Update()
@@ -31,6 +33,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
         Vector2 cameraRelativeMovement = GetCameraRelativeMovement(movementDirection);
+        if (isPaused) cameraRelativeMovement *= 0;
 
         Move(cameraRelativeMovement);
         Rotate(cameraRelativeMovement);
@@ -79,6 +82,17 @@ public class PlayerMovement : MonoBehaviour
             float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg - ROTATION_OFFSET;
             Quaternion q = Quaternion.AngleAxis(angle, Vector3.down);
             gfx.transform.rotation = Quaternion.Slerp(gfx.transform.rotation, q, Time.deltaTime * rotationSpeed);
+        }
+    }
+
+    private void OnGameStateChange(GameState newGameState) {
+        switch (newGameState) {
+            case GameState.Gameplay:
+                isPaused = false;
+                break;
+            case GameState.Paused:
+                isPaused = true;
+                break;
         }
     }
 }
