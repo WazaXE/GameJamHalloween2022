@@ -14,4 +14,8 @@ public class PauseManager : MonoBehaviour
             else GameStateManager.Instance.SetState(GameState.Gameplay);
         }
     }
+
+    public void SetGameState(GameState gameState) {
+        GameStateManager.Instance.SetState(gameState);
+    }
 }
