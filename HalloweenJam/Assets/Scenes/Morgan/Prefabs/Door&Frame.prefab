@@ -170,17 +170,17 @@ PrefabInstance:
     - target: {fileID: 2655998267149788042, guid: 648e4e411893acb499db0357aa776ac5,
         type: 3}
       propertyPath: m_Size.x
-      value: 1.6951212
+      value: 1.6385261
       objectReference: {fileID: 0}
     - target: {fileID: 2655998267149788042, guid: 648e4e411893acb499db0357aa776ac5,
         type: 3}
       propertyPath: m_Center.x
-      value: 0
+      value: 0.028297631
       objectReference: {fileID: 0}
     - target: {fileID: 2655998267149788042, guid: 648e4e411893acb499db0357aa776ac5,
         type: 3}
       propertyPath: m_Center.y
-      value: 0.21
+      value: 0.21000002
       objectReference: {fileID: 0}
     - target: {fileID: 2655998267149788045, guid: 648e4e411893acb499db0357aa776ac5,
         type: 3}
@@ -241,6 +241,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Door
+      objectReference: {fileID: 0}
+    - target: {fileID: 2655998267149788047, guid: 648e4e411893acb499db0357aa776ac5,
+        type: 3}
+      propertyPath: m_Anchor.x
+      value: -0.8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 648e4e411893acb499db0357aa776ac5, type: 3}
