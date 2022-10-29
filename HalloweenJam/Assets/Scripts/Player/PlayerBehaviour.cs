@@ -8,6 +8,7 @@ public class PlayerBehaviour : MonoBehaviour, ITarget, IAttackable
     [SerializeField] private Faction faction;
     [SerializeField] Animator animator;
     [SerializeField] ParticleSystem particle;
+    [SerializeField] ParticleSystem loseCandyParticle;
     [SerializeField] private CandyHandler candyHandler;
 
     [Header("Attacked")]
@@ -46,6 +47,7 @@ public class PlayerBehaviour : MonoBehaviour, ITarget, IAttackable
         StartCoroutine(InvulnerableCooldown());
         // damage
         candyHandler.RemoveCandy(Damage);
+        loseCandyParticle.Play();
         Debug.Log("AAAAH HELP");
     }
 
