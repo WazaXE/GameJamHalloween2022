@@ -25,20 +25,29 @@ public class EnemyBehaviourHandler : MonoBehaviour, ITarget, IVisionReport
     }
 
     public void ReportCanSeeTarget() {
+        if (activeBehaviour == followBehaviour) return;
         SwitchBehaviour(followBehaviour);
-        Debug.Log("Can see target!");
+        // Debug.Log("Can see target!");
     }
     public void ReportLostTarget() {
+        if (activeBehaviour == patrolBehaviour) return;
         SwitchBehaviour(patrolBehaviour);
-        Debug.Log("Lost target!");
+        // Debug.Log("Lost target!");
     }
     public void ReportIsInAttackRange() {
+        if (activeBehaviour == attackBehaviour) return;
         SwitchBehaviour(attackBehaviour);
-        Debug.Log("Attack target!");
+        // Debug.Log("Attack target!");
+    }
+
+    public void ReportLeftAttackRange() {
+        if(activeBehaviour == attackBehaviour) {
+            SwitchBehaviour(followBehaviour);
+        }
     }
 
     private void SwitchBehaviour(BehaviourBase newBehaviour) {
-        if (newBehaviour == null || activeBehaviour == newBehaviour) return;
+        if (newBehaviour == null || newBehaviour == activeBehaviour) return;
         if(activeBehaviour != null) activeBehaviour.EndBehaviour();
         activeBehaviour = newBehaviour;
         activeBehaviour.StartBehaviour();

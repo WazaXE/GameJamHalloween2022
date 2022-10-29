@@ -3,11 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(PlayerMovement))]
-public class PlayerBehaviour : MonoBehaviour, ITarget
+public class PlayerBehaviour : MonoBehaviour, ITarget, IAttackable
 {
     [SerializeField] private Faction faction;
     [SerializeField] Animator animator;
     [SerializeField] ParticleSystem particle;
+    [SerializeField] private CandyHandler candyHandler;
+
+    [Header("Attacked")]
+    [SerializeField] private float invulnerabilityTime;
+
+    private bool isInvulnerable;
 
     public Transform Position => transform;
     public Faction Faction => faction;
@@ -19,11 +25,6 @@ public class PlayerBehaviour : MonoBehaviour, ITarget
     }
     private void OnDestroy() {
         DetectableTargetManager.Instance.DeregisterTarget(this);
-    }
-
-    void Update()
-    {
-        
     }
 
     public void PlayerMoving(bool walking) {
@@ -38,5 +39,19 @@ public class PlayerBehaviour : MonoBehaviour, ITarget
             particle.Stop();
         }
 
+    }
+
+    public void Attack(float Damage) {
+        if (isInvulnerable) return;
+        StartCoroutine(InvulnerableCooldown());
+        // damage
+        candyHandler.RemoveCandy(Damage);
+        Debug.Log("AAAAH HELP");
+    }
+
+    private IEnumerator InvulnerableCooldown() {
+        isInvulnerable = true;
+        yield return new WaitForSeconds(invulnerabilityTime);
+        isInvulnerable = false;
     }
 }

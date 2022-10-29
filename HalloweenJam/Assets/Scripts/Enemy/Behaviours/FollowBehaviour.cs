@@ -10,7 +10,6 @@ public class FollowBehaviour : BehaviourBase
 {
     private CharacterAgent characterAgent;
     private Vision vision;
-    private NavMeshAgent nvAgent;
     private bool isActive;
 
     void Update()
@@ -23,7 +22,6 @@ public class FollowBehaviour : BehaviourBase
     public override void StartBehaviour() {
         characterAgent = GetComponent<CharacterAgent>();
         vision = GetComponent<Vision>();
-        nvAgent = GetComponent<NavMeshAgent>();
         isActive = true;
     }
 
@@ -32,7 +30,6 @@ public class FollowBehaviour : BehaviourBase
 
         characterAgent = null;
         vision = null;
-        nvAgent = null;
         isActive = false;
 
     }

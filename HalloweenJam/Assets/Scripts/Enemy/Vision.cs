@@ -31,20 +31,34 @@ public class Vision : MonoBehaviour
     }
 
     private void FindBestTarget() {
+        ITarget potentialTarget = null;
+        float bestDist = float.PositiveInfinity;
+
         for (int i = 0; i < DetectableTargetManager.Instance.detectableTargets.Count; i++) {
             ITarget target = DetectableTargetManager.Instance.detectableTargets[i];
             if (!ValidTarget(target)) continue;
 
-            identifiedTarget = target;
-            awareness = 2f;
-
-            behaviourHandler.ReportCanSeeTarget();
-            if (IsInRange(target.Position.position, attackRange)) {
-                behaviourHandler.ReportIsInAttackRange();
+            float dist = Vector3.Distance(target.Position.position, transform.position);
+            if (potentialTarget == null || dist < bestDist) {
+                potentialTarget = target;
+                bestDist = dist;
             }
         }
 
-        if (identifiedTarget != null && !ValidTarget(identifiedTarget)) {
+        if(potentialTarget != null && potentialTarget != identifiedTarget) {
+            identifiedTarget = potentialTarget;
+            awareness = 2f;
+            behaviourHandler.ReportCanSeeTarget();
+        }
+
+        if(identifiedTarget != null && IsInRange(identifiedTarget.Position.position, attackRange)) {
+            behaviourHandler.ReportIsInAttackRange();
+        }
+        if(identifiedTarget != null && !IsInRange(identifiedTarget.Position.position, attackRange)) {
+            behaviourHandler.ReportLeftAttackRange();
+        }
+
+        if (identifiedTarget != null && !InLineOfSight(identifiedTarget)) {
             if(awareness <= 0) {
                 behaviourHandler.ReportLostTarget();
                 identifiedTarget = null;

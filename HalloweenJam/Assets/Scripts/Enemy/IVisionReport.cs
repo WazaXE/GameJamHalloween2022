@@ -7,4 +7,5 @@ public interface IVisionReport
     public void ReportCanSeeTarget();
     public void ReportLostTarget();
     public void ReportIsInAttackRange();
+    public void ReportLeftAttackRange();
 }

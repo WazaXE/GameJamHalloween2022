@@ -4981,7 +4981,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   faction: 0
   animator: {fileID: 448149330959796945}
-  particle: {fileID: 0}
+  particle: {fileID: 507959933131705212}
+  invulnerabilityTime: 0.1
 --- !u!1 &2946716628532893580
 GameObject:
   m_ObjectHideFlags: 0

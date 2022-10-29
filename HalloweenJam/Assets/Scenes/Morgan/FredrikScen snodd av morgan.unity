@@ -301,7 +301,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 20043186}
-  m_LocalRotation: {x: -0.0765201, y: 0.9091223, z: -0.3613591, w: -0.1925125}
+  m_LocalRotation: {x: -0.076520115, y: 0.9091223, z: -0.36135906, w: -0.19251251}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -720,27 +720,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: DummyGhost (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 7525057814247182645, guid: f52e7690daeb44b40b3c0e9adc949c26,
-        type: 3}
-      propertyPath: targetAwarenessDecayRate
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7525057814247182647, guid: f52e7690daeb44b40b3c0e9adc949c26,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7525057814247182649, guid: f52e7690daeb44b40b3c0e9adc949c26,
-        type: 3}
-      propertyPath: patrolPath
-      value: 
-      objectReference: {fileID: 11400000, guid: 74b8da27cde3d9f4cbcf59cc4c161a1a,
-        type: 2}
-    - target: {fileID: 7525057814477745573, guid: f52e7690daeb44b40b3c0e9adc949c26,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f52e7690daeb44b40b3c0e9adc949c26, type: 3}
@@ -15362,6 +15341,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1860727879}
     m_Modifications:
+    - target: {fileID: 6984052901050386324, guid: f52e7690daeb44b40b3c0e9adc949c26,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.85
+      objectReference: {fileID: 0}
     - target: {fileID: 7525057814247182642, guid: f52e7690daeb44b40b3c0e9adc949c26,
         type: 3}
       propertyPath: m_RootOrder
@@ -15421,6 +15405,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: DummyGhost
+      objectReference: {fileID: 0}
+    - target: {fileID: 7525057814247182643, guid: f52e7690daeb44b40b3c0e9adc949c26,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7525057814247182645, guid: f52e7690daeb44b40b3c0e9adc949c26,
         type: 3}
@@ -17700,7 +17689,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1463881626}
-  m_LocalRotation: {x: -0.07652011, y: 0.9091223, z: -0.36135906, w: -0.19251253}
+  m_LocalRotation: {x: -0.07652011, y: 0.9091223, z: -0.3613591, w: -0.1925125}
   m_LocalPosition: {x: -6.0891705, y: 8, z: -12.935118}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -18412,6 +18401,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 7570327065997541311, guid: 35f601a78143e2d44b4a70e50ae0ccc9,
+        type: 3}
+      propertyPath: candyHandler
+      value: 
+      objectReference: {fileID: 1474717163}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 35f601a78143e2d44b4a70e50ae0ccc9, type: 3}
 --- !u!1 &1540425425
@@ -20456,7 +20450,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1651466980}
-  m_LocalRotation: {x: -0.07203405, y: 0.91725963, z: -0.3401741, w: -0.19423565}
+  m_LocalRotation: {x: -0.07203406, y: 0.91725963, z: -0.3401741, w: -0.19423562}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -24073,7 +24067,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1916097621}
-  m_LocalRotation: {x: -0.08098417, y: 0.90045714, z: -0.38244027, w: -0.19067758}
+  m_LocalRotation: {x: -0.0809842, y: 0.90045714, z: -0.38244027, w: -0.19067763}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
