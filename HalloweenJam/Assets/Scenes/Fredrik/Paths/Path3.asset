@@ -12,5 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8dd97543c30dc4f4690a94a8b7426283, type: 3}
   m_Name: Path3
   m_EditorClassIdentifier: 
-  patrolPoints: []
-  isLoop: 0
+  patrolPoints:
+  - {x: -14.8, y: 0, z: -1.6}
+  - {x: -2.32, y: 0, z: -9.89}
+  - {x: -15.89, y: 0, z: -10.2}
+  isLoop: 1
