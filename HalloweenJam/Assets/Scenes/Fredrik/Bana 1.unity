@@ -15736,7 +15736,7 @@ PrefabInstance:
     - target: {fileID: 7525057814247182645, guid: f52e7690daeb44b40b3c0e9adc949c26,
         type: 3}
       propertyPath: targetAwarenessDecayRate
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7525057814247182646, guid: f52e7690daeb44b40b3c0e9adc949c26,
         type: 3}
