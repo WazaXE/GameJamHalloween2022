@@ -21,7 +21,7 @@ public class OpenDoor : MonoBehaviour
         
     }
 
-    public void OnTriggerEnter(Collider other)
+    void OnTriggerEnter(Collider other)
     {
         if (other.gameObject == player)
         {
@@ -32,7 +32,7 @@ public class OpenDoor : MonoBehaviour
     }
 
 
-    public void OnTriggerExit(Collider other)
+    void OnTriggerExit(Collider other)
     {
         if(other.gameObject == player)
         {

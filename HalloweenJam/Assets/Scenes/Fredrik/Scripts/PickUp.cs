@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PickUp : MonoBehaviour
 {
-    public GameObject player;
+    [SerializeField] GameObject player;
 
     // Start is called before the first frame update
     void Start()
