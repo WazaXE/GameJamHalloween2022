@@ -6099,12 +6099,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 525898449}
   m_CullTransparentMesh: 1
---- !u!198 &578075444 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 1895782373989056341, guid: 35f601a78143e2d44b4a70e50ae0ccc9,
-    type: 3}
-  m_PrefabInstance: {fileID: 827385099}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &582365333
 GameObject:
   m_ObjectHideFlags: 0
@@ -8052,11 +8046,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2946716627900076768, guid: 35f601a78143e2d44b4a70e50ae0ccc9,
-        type: 3}
-      propertyPath: movementSpeed
-      value: 8
-      objectReference: {fileID: 0}
     - target: {fileID: 2946716627900076770, guid: 35f601a78143e2d44b4a70e50ae0ccc9,
         type: 3}
       propertyPath: m_RootOrder
@@ -8117,16 +8106,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 7570327065997541311, guid: 35f601a78143e2d44b4a70e50ae0ccc9,
-        type: 3}
-      propertyPath: particle
-      value: 
-      objectReference: {fileID: 827385102}
-    - target: {fileID: 7570327065997541311, guid: 35f601a78143e2d44b4a70e50ae0ccc9,
-        type: 3}
-      propertyPath: loseCandyParticle
-      value: 
-      objectReference: {fileID: 578075444}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 35f601a78143e2d44b4a70e50ae0ccc9, type: 3}
 --- !u!114 &827385100 stripped
@@ -8144,12 +8123,6 @@ MonoBehaviour:
 --- !u!4 &827385101 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2946716627900076770, guid: 35f601a78143e2d44b4a70e50ae0ccc9,
-    type: 3}
-  m_PrefabInstance: {fileID: 827385099}
-  m_PrefabAsset: {fileID: 0}
---- !u!198 &827385102 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 507959933131705212, guid: 35f601a78143e2d44b4a70e50ae0ccc9,
     type: 3}
   m_PrefabInstance: {fileID: 827385099}
   m_PrefabAsset: {fileID: 0}
