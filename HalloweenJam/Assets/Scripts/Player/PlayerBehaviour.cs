@@ -7,6 +7,7 @@ public class PlayerBehaviour : MonoBehaviour, ITarget
 {
     [SerializeField] private Faction faction;
     [SerializeField] Animator animator;
+    [SerializeField] ParticleSystem particle;
 
     public Transform Position => transform;
     public Faction Faction => faction;
@@ -27,5 +28,15 @@ public class PlayerBehaviour : MonoBehaviour, ITarget
 
     public void PlayerMoving(bool walking) {
         animator.SetBool("walking", walking);
+
+        if (walking)
+        {
+            particle.Play();
+        }
+        else
+        {
+            particle.Stop();
+        }
+
     }
 }
