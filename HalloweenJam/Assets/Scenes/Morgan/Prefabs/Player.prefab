@@ -4982,6 +4982,7 @@ MonoBehaviour:
   faction: 0
   animator: {fileID: 448149330959796945}
   particle: {fileID: 507959933131705212}
+  candyHandler: {fileID: 9013828269768456067}
   invulnerabilityTime: 0.1
 --- !u!1 &2946716628532893580
 GameObject:
