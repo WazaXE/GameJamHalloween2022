@@ -6,7 +6,19 @@ public class KeyHandler : MonoBehaviour
 {
     private List<GameObject> keys;
 
-    public void AddKey(GameObject key) {
+    private void OnTriggerEnter(Collider other) {
+        Key key = other.GetComponent<Key>();
+        if (key == null) return;
+        key.Collect(transform);
+        key.OnCollected += OnKeyCollected;
+    }
+
+    private void OnKeyCollected(Collectable c) {
+        Key key = (Key)c;
+        AddKey(key.GetKey());
+    }
+
+    private void AddKey(GameObject key) {
         if(keys == null) keys = new List<GameObject>();
         keys.Add(key);
     }

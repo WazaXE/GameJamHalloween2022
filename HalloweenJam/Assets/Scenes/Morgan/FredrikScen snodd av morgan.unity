@@ -17953,6 +17953,18 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!114 &1474717163 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9013828269768456067, guid: 35f601a78143e2d44b4a70e50ae0ccc9,
+    type: 3}
+  m_PrefabInstance: {fileID: 1509763795}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5879ba3a8c6d6e488d6be839799bb41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!43 &1492499068
 Mesh:
   m_ObjectHideFlags: 0
@@ -19220,19 +19232,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1509763795}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1562068909
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1562068899}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e5879ba3a8c6d6e488d6be839799bb41, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxCandy: 100
 --- !u!1 &1586261466
 GameObject:
   m_ObjectHideFlags: 0
@@ -29081,7 +29080,12 @@ PrefabInstance:
         type: 3}
       propertyPath: handler
       value: 
-      objectReference: {fileID: 1562068909}
+      objectReference: {fileID: 1474717163}
+    - target: {fileID: 1645856897392913050, guid: dea93f6448cdd4d42bca3b7329116dd4,
+        type: 3}
+      propertyPath: playerCandyHandler
+      value: 
+      objectReference: {fileID: 1474717163}
     - target: {fileID: 1645856897392913051, guid: dea93f6448cdd4d42bca3b7329116dd4,
         type: 3}
       propertyPath: m_Pivot.x

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
+[RequireComponent(typeof(SphereCollider))]
 public class CandyHandler : MonoBehaviour
 {
     [SerializeField] private int maxCandy;
@@ -49,5 +50,17 @@ public class CandyHandler : MonoBehaviour
                 candyAmount = 0;
             }
         }
+    }
+
+    private void OnTriggerEnter(Collider other) {
+        Candy candy = other.GetComponent<Candy>();
+        if (candy == null) return;
+        candy.Collect(transform);
+        candy.OnCollected += OnCandyCollected;
+    }
+
+    private void OnCandyCollected(Collectable collectable) {
+        Candy c = (Candy)collectable;
+        AddCandy(c.Value);
     }
 }

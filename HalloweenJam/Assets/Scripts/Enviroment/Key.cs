@@ -2,13 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Key : MonoBehaviour
+public class Key : Collectable
 {
-    private void OnTriggerEnter(Collider other) {
-        KeyHandler keyHandler = other.GetComponent<KeyHandler>();
-        if (keyHandler == null) return;
-        Debug.Log(keyHandler);
-        keyHandler.AddKey(gameObject);
-        gameObject.SetActive(false);
+    public GameObject GetKey() {
+        return gameObject;
     }
 }
