@@ -1,88 +1,83 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &8963093113127050432
+--- !u!1001 &572506405622175478
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 6461463215591607968}
+    m_TransformParent: {fileID: 6097538798530943443}
     m_Modifications:
-    - target: {fileID: 3651260755497229739, guid: 54b47196763a8d74692b6eff48d64557,
-        type: 3}
-      propertyPath: m_Name
-      value: LoliPop_LP
-      objectReference: {fileID: 0}
-    - target: {fileID: 4170389206608955153, guid: 54b47196763a8d74692b6eff48d64557,
+    - target: {fileID: 5982994036427974041, guid: ce10d952b51da1d489f78b52bde35d7d,
         type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 4170389206608955153, guid: 54b47196763a8d74692b6eff48d64557,
+    - target: {fileID: 5982994036427974041, guid: ce10d952b51da1d489f78b52bde35d7d,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 0.002354479
       objectReference: {fileID: 0}
-    - target: {fileID: 4170389206608955153, guid: 54b47196763a8d74692b6eff48d64557,
+    - target: {fileID: 5982994036427974041, guid: ce10d952b51da1d489f78b52bde35d7d,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.379
-      objectReference: {fileID: 0}
-    - target: {fileID: 4170389206608955153, guid: 54b47196763a8d74692b6eff48d64557,
-        type: 3}
-      propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4170389206608955153, guid: 54b47196763a8d74692b6eff48d64557,
+    - target: {fileID: 5982994036427974041, guid: ce10d952b51da1d489f78b52bde35d7d,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.03906098
+      objectReference: {fileID: 0}
+    - target: {fileID: 5982994036427974041, guid: ce10d952b51da1d489f78b52bde35d7d,
         type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 4170389206608955153, guid: 54b47196763a8d74692b6eff48d64557,
+    - target: {fileID: 5982994036427974041, guid: ce10d952b51da1d489f78b52bde35d7d,
         type: 3}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4170389206608955153, guid: 54b47196763a8d74692b6eff48d64557,
+    - target: {fileID: 5982994036427974041, guid: ce10d952b51da1d489f78b52bde35d7d,
         type: 3}
       propertyPath: m_LocalRotation.y
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 4170389206608955153, guid: 54b47196763a8d74692b6eff48d64557,
+    - target: {fileID: 5982994036427974041, guid: ce10d952b51da1d489f78b52bde35d7d,
         type: 3}
       propertyPath: m_LocalRotation.z
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 4170389206608955153, guid: 54b47196763a8d74692b6eff48d64557,
+    - target: {fileID: 5982994036427974041, guid: ce10d952b51da1d489f78b52bde35d7d,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4170389206608955153, guid: 54b47196763a8d74692b6eff48d64557,
+    - target: {fileID: 5982994036427974041, guid: ce10d952b51da1d489f78b52bde35d7d,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4170389206608955153, guid: 54b47196763a8d74692b6eff48d64557,
+    - target: {fileID: 5982994036427974041, guid: ce10d952b51da1d489f78b52bde35d7d,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6362475547152465699, guid: ce10d952b51da1d489f78b52bde35d7d,
+        type: 3}
+      propertyPath: m_Name
+      value: Cho_LP
+      objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 685824602374216252, guid: 54b47196763a8d74692b6eff48d64557, type: 3}
-    - {fileID: -83146737678408555, guid: 54b47196763a8d74692b6eff48d64557, type: 3}
-  m_SourcePrefab: {fileID: 100100000, guid: 54b47196763a8d74692b6eff48d64557, type: 3}
---- !u!1001 &9036898489727403096
+    - {fileID: -6715806753072482070, guid: ce10d952b51da1d489f78b52bde35d7d, type: 3}
+    - {fileID: 8273623368415761166, guid: ce10d952b51da1d489f78b52bde35d7d, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: ce10d952b51da1d489f78b52bde35d7d, type: 3}
+--- !u!1001 &8096617808327693099
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1843038636447457685, guid: f7bcb6ec45ae3eb41b8e951e551fafaa,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 2648743047271025400, guid: f7bcb6ec45ae3eb41b8e951e551fafaa,
         type: 3}
       propertyPath: m_RootOrder
@@ -141,13 +136,13 @@ PrefabInstance:
     - target: {fileID: 2648743047271025403, guid: f7bcb6ec45ae3eb41b8e951e551fafaa,
         type: 3}
       propertyPath: m_Name
-      value: LoliPop
+      value: Cho
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f7bcb6ec45ae3eb41b8e951e551fafaa, type: 3}
---- !u!4 &6461463215591607968 stripped
+--- !u!4 &6097538798530943443 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2648743047271025400, guid: f7bcb6ec45ae3eb41b8e951e551fafaa,
     type: 3}
-  m_PrefabInstance: {fileID: 9036898489727403096}
+  m_PrefabInstance: {fileID: 8096617808327693099}
   m_PrefabAsset: {fileID: 0}
