@@ -25,8 +25,6 @@ public class FollowBehaviour : BehaviourBase
         vision = GetComponent<Vision>();
         nvAgent = GetComponent<NavMeshAgent>();
         isActive = true;
-
-        Debug.Log(nvAgent.areaMask);
     }
 
     public override void EndBehaviour() {

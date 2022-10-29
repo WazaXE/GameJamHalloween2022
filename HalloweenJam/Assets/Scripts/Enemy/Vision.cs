@@ -59,6 +59,7 @@ public class Vision : MonoBehaviour
         if (t.Faction == self.Faction) return false;
         if (!IsInRange(t.Position.position, visionRange)) return false;
         if (!IsInViewArea(t.Position.position)) return false;
+        if(!InLineOfSight(t)) return false;
 
         return true;
     }
@@ -94,6 +95,16 @@ public class Vision : MonoBehaviour
 
         left = leftViewEdge;
         right = rightViewEdge;
+    }
+
+    private bool InLineOfSight(ITarget target) {
+        Vector3 direction = target.Position.position - transform.position;
+        if(Physics.Raycast(transform.position, direction, out RaycastHit hit)) {
+            ITarget hitTarget = hit.transform.GetComponent<ITarget>();
+            if (hitTarget == null) return false;
+            if (hitTarget == target) return true;
+        }
+        return false;
     }
 
     private void OnDrawGizmosSelected() {
