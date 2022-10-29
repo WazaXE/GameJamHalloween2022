@@ -44,4 +44,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d5548e3ced8fb94c8c8a309385c83f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetPath: {fileID: 0}
+  targetPath: {fileID: 11400000, guid: 1d5222e9f66b4444684f6b627e9b4c43, type: 2}
+  pointColor: {r: 1, g: 0, b: 0.6096759, a: 1}
+  lineColor: {r: 0.14076614, g: 1, b: 0, a: 1}
