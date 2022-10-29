@@ -7,6 +7,7 @@ using UnityEngine.Events;
 public class CandyHandler : MonoBehaviour
 {
     [SerializeField] private int maxCandy;
+    [SerializeField] private int startCandy;
 
     private float candyAmount;
 
@@ -23,7 +24,7 @@ public class CandyHandler : MonoBehaviour
     private void Start() {
         candyAmount = 0;
 
-        AddCandy(0);
+        AddCandy(startCandy);
     }
 
     public void AddCandy(float amount) {
