@@ -9,28 +9,13 @@ public class Menu : MonoBehaviour
     public GameObject pauseMenu;
     public GameObject upgradesMenu;
 
-    public GameObject pauseFirstButton;
     public GameObject upgradesFirstButton;
     public GameObject upgradesClosedButton;
 
-    public void PauseUnpause()
+
+    public void OpenUpgrades()
     {
-        if (!pauseMenu.activeInHierarchy)
-        {
-
-            //Clear selected object
-
-            EventSystem.current.SetSelectedGameObject(null);
-
-            //Set new selected object
-
-            EventSystem.current.SetSelectedGameObject(pauseFirstButton);
-
-        }
-    }
-
-    public void OpenOptions()
-    {
+        pauseMenu.SetActive(false);
         upgradesMenu.SetActive(true);
 
         //Clear selected object
@@ -42,9 +27,10 @@ public class Menu : MonoBehaviour
         EventSystem.current.SetSelectedGameObject(upgradesFirstButton);
     }
 
-    public void CloseOptions()
+    public void CloseUpgrades()
     {
         upgradesMenu.SetActive(false);
+        pauseMenu.SetActive(true);
 
         //Clear selected object
 
@@ -52,7 +38,7 @@ public class Menu : MonoBehaviour
 
         //Set new selected object
 
-        EventSystem.current.SetSelectedGameObject(upgradesFirstButton);
+        EventSystem.current.SetSelectedGameObject(upgradesClosedButton);
     }
 
 
