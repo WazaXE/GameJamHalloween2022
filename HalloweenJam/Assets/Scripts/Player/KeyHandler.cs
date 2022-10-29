@@ -8,9 +8,15 @@ public class KeyHandler : MonoBehaviour
 
     private void OnTriggerEnter(Collider other) {
         Key key = other.GetComponent<Key>();
-        if (key == null) return;
-        key.Collect(transform);
-        key.OnCollected += OnKeyCollected;
+        if (key != null) {
+            key.Collect(transform);
+            key.OnCollected += OnKeyCollected;
+        }
+        
+        DoorLock doorLock = other.GetComponent<DoorLock>();
+        if (doorLock != null) {
+            UnlockDoor(doorLock);
+        }
     }
 
     private void OnKeyCollected(Collectable c) {
@@ -23,7 +29,7 @@ public class KeyHandler : MonoBehaviour
         keys.Add(key);
     }
 
-    public void EnteredUnlockArea(DoorLock doorLock) {
+    private void UnlockDoor(DoorLock doorLock) {
         if (keys == null) return;
         for (int i = 0; i < keys.Count; i++) {
             if (doorLock.UnlockDoor(keys[i])) {

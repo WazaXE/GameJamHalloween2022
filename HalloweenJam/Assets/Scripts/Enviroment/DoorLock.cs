@@ -7,10 +7,12 @@ public class DoorLock : MonoBehaviour
 {
     [SerializeField] private bool locked;
     [SerializeField] private GameObject key;
-    [SerializeField] private Rigidbody rb;
+
+    private Rigidbody rb;
 
     void Start()
     {
+        rb = GetComponent<Rigidbody>();
         if(locked) rb.freezeRotation = true;
     }
 
@@ -21,12 +23,5 @@ public class DoorLock : MonoBehaviour
         rb.freezeRotation = false;
         Destroy(usedKey);
         return true;
-    }
-
-    private void OnTriggerEnter(Collider other) {
-        KeyHandler keyHandler = other.GetComponent<KeyHandler>();
-        if(keyHandler == null) return;
-
-        keyHandler.EnteredUnlockArea(this);
     }
 }

@@ -39,7 +39,11 @@ public class Collectable : MonoBehaviour
         }
 
         OnCollected?.Invoke(this);
-        Destroy(gameObject);
+        Collected();
+    }
+
+    protected virtual void Collected() {
+
     }
 
     private struct MovementCurve {

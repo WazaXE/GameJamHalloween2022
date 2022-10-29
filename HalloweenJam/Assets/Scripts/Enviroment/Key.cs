@@ -7,4 +7,8 @@ public class Key : Collectable
     public GameObject GetKey() {
         return gameObject;
     }
+
+    protected override void Collected() {
+        gameObject.SetActive(false);
+    }
 }

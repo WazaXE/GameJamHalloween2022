@@ -7,4 +7,8 @@ public class Candy : Collectable
     [SerializeField] private int value;
 
     public int Value => value;
+
+    protected override void Collected() {
+        Destroy(gameObject);
+    }
 }
