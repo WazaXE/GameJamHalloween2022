@@ -78,6 +78,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1843038636447457685, guid: f7bcb6ec45ae3eb41b8e951e551fafaa,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.479
+      objectReference: {fileID: 0}
+    - target: {fileID: 1843038636447457685, guid: f7bcb6ec45ae3eb41b8e951e551fafaa,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.05
+      objectReference: {fileID: 0}
     - target: {fileID: 2648743047271025400, guid: f7bcb6ec45ae3eb41b8e951e551fafaa,
         type: 3}
       propertyPath: m_RootOrder
@@ -142,6 +152,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: CandyCain
+      objectReference: {fileID: 0}
+    - target: {fileID: 7694391363748756623, guid: f7bcb6ec45ae3eb41b8e951e551fafaa,
+        type: 3}
+      propertyPath: m_Range
+      value: 3.1607335
+      objectReference: {fileID: 0}
+    - target: {fileID: 7694391363748756623, guid: f7bcb6ec45ae3eb41b8e951e551fafaa,
+        type: 3}
+      propertyPath: m_Intensity
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f7bcb6ec45ae3eb41b8e951e551fafaa, type: 3}
