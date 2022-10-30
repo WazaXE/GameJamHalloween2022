@@ -16,10 +16,12 @@ public class LevelEnder : MonoBehaviour
     [SerializeField] private float fadeoutTime;
     [Space(15)]
     [SerializeField] private CandyHandler candyHandler;
+    [SerializeField] private ExitPortal exitPortal;
 
     void Start()
     {
         candyHandler.OnNoRemainingCandy += GameOver;
+        exitPortal.OnPortalExit += LevelComplete;
     }
 
     public void LevelComplete() {
