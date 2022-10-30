@@ -4900,10 +4900,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f74ae7596839f854db627c885455bd62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  visionRange: 5
-  visionAngle: 90.43
+  visionRange: 6
+  visionAngle: 100
   attackRange: 2
-  targetAwarenessDecayRate: 0
+  targetAwarenessDecayRate: 3
 --- !u!114 &7525057814247182644
 MonoBehaviour:
   m_ObjectHideFlags: 0
