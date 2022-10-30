@@ -4901,7 +4901,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   visionRange: 7
-  visionAngle: 110
+  visionAngle: 120
   attackRange: 1.6
   targetAwarenessDecayRate: 6
 --- !u!114 &7525057814247182644
