@@ -9045,7 +9045,7 @@ PrefabInstance:
     - target: {fileID: 9013828269768456067, guid: 35f601a78143e2d44b4a70e50ae0ccc9,
         type: 3}
       propertyPath: maxCandy
-      value: 40
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 35f601a78143e2d44b4a70e50ae0ccc9, type: 3}
