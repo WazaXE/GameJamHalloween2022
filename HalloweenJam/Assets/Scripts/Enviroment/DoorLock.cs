@@ -7,6 +7,7 @@ public class DoorLock : MonoBehaviour
 {
     [SerializeField] private bool locked;
     [SerializeField] private GameObject key;
+    [SerializeField] private GameObject lockedIndicator;
 
     private Rigidbody rb;
 
@@ -14,6 +15,7 @@ public class DoorLock : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         if(locked) rb.freezeRotation = true;
+        if(lockedIndicator != null) lockedIndicator.SetActive(true);
     }
 
     public bool UnlockDoor(GameObject usedKey) {
@@ -21,6 +23,7 @@ public class DoorLock : MonoBehaviour
         if (usedKey != key) return false;
 
         rb.freezeRotation = false;
+        if (lockedIndicator != null) lockedIndicator.SetActive(false);
         Destroy(usedKey);
         return true;
     }
