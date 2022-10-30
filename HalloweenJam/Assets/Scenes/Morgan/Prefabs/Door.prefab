@@ -115,6 +115,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   locked: 0
   key: {fileID: 0}
+  lockedIndicator: {fileID: 0}
 --- !u!1 &2655998267628526050
 GameObject:
   m_ObjectHideFlags: 0
@@ -309,7 +310,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 6cc3e3a6c6349d84cba08b2aaf029049, type: 2}
+      objectReference: {fileID: 2100000, guid: 4210af224fe83e54b9d38b36357c5a7e, type: 2}
     - target: {fileID: 7137032465036859449, guid: f51bb1c62a38da1439365bf5e7c97018,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
