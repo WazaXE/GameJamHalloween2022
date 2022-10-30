@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6517775467760380690}
   - component: {fileID: 7916221847771014327}
   - component: {fileID: 5348278123605725309}
+  - component: {fileID: 4892574783901460047}
   m_Layer: 0
   m_Name: Candle
   m_TagString: Untagged
@@ -84,6 +85,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &4892574783901460047
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5852457324252017064}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 953b1bbcb5a810943a9667be167c4fbf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pointLight: {fileID: 4388233553706433081}
 --- !u!1 &6714678506708085636
 GameObject:
   m_ObjectHideFlags: 0
@@ -129,8 +143,8 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 0.751665, g: 0.02264148, b: 1, a: 1}
-  m_Intensity: 1
-  m_Range: 2.5452237
+  m_Intensity: 1.5
+  m_Range: 2.5
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
