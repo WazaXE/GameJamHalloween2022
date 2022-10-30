@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 361759564}
-  m_IndirectSpecularColor: {r: 0.18383528, g: 0.22854128, b: 0.3005745, a: 1}
+  m_IndirectSpecularColor: {r: 0.011861039, g: 0.009602001, b: 0.007132526, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4974,8 +4974,8 @@ Light:
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
-  m_Color: {r: 0.4056604, g: 0.4056604, b: 0.4056604, a: 1}
-  m_Intensity: 0
+  m_Color: {r: 0.3207547, g: 0.3207547, b: 0.3207547, a: 1}
+  m_Intensity: 0.09
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -5032,14 +5032,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 361759563}
-  m_LocalRotation: {x: 0.2131339, y: 0.6302395, z: -0.11227512, w: 0.738083}
+  m_LocalRotation: {x: -0.008073674, y: 0.665253, z: 0.1390038, w: 0.73351973}
   m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 152.862, y: -97.40799, z: -173.359}
+  m_LocalEulerAnglesHint: {x: 191.349, y: -96.72101, z: -168.636}
 --- !u!114 &361759566
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23481,12 +23481,6 @@ Mesh:
     offset: 0
     size: 0
     path: 
---- !u!198 &1477758808 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 507959933131705212, guid: 35f601a78143e2d44b4a70e50ae0ccc9,
-    type: 3}
-  m_PrefabInstance: {fileID: 1509763795}
-  m_PrefabAsset: {fileID: 0}
 --- !u!43 &1492499068
 Mesh:
   m_ObjectHideFlags: 0
@@ -23934,16 +23928,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 7570327065997541311, guid: 35f601a78143e2d44b4a70e50ae0ccc9,
-        type: 3}
-      propertyPath: particle
-      value: 
-      objectReference: {fileID: 1477758808}
-    - target: {fileID: 9013828269768456067, guid: 35f601a78143e2d44b4a70e50ae0ccc9,
-        type: 3}
-      propertyPath: maxCandy
-      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 35f601a78143e2d44b4a70e50ae0ccc9, type: 3}
@@ -29713,7 +29697,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1916097621}
-  m_LocalRotation: {x: 0.396622, y: 0.09543097, z: -0.04149928, w: 0.91206455}
+  m_LocalRotation: {x: 0.39662197, y: 0.09543099, z: -0.041499298, w: 0.91206455}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
