@@ -9,14 +9,22 @@ public class SceneManagement : MonoBehaviour
         SceneManager.LoadScene(sceneIndex, LoadSceneMode.Single);
     }
 
+    public void ReloadScene() {
+        LoadScene(GetSceneIndex());
+    }
+
     public void LoadNextScene() {
-        int sceneIndex = SceneManager.GetActiveScene().buildIndex;
+        int sceneIndex = GetSceneIndex();
         LoadScene(sceneIndex + 1);
     }
 
     public void LoadPreviousScene() {
-        int sceneIndex = SceneManager.GetActiveScene().buildIndex;
+        int sceneIndex = GetSceneIndex();
         LoadScene(sceneIndex - 1);
+    }
+
+    private int GetSceneIndex() {
+        return SceneManager.GetActiveScene().buildIndex;
     }
 
     public void Quit() {
