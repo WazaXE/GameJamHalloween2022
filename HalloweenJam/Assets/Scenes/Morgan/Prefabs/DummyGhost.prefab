@@ -4903,7 +4903,7 @@ MonoBehaviour:
   visionRange: 6
   visionAngle: 100
   attackRange: 2
-  targetAwarenessDecayRate: 3
+  targetAwarenessDecayRate: 5
 --- !u!114 &7525057814247182644
 MonoBehaviour:
   m_ObjectHideFlags: 0
