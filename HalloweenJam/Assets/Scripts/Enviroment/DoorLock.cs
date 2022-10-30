@@ -14,8 +14,12 @@ public class DoorLock : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        if(locked) rb.freezeRotation = true;
-        if(lockedIndicator != null) lockedIndicator.SetActive(true);
+        if (locked) {
+            rb.freezeRotation = true;
+
+            if (lockedIndicator != null) lockedIndicator.SetActive(true);
+        }
+        
     }
 
     public bool UnlockDoor(GameObject usedKey) {
