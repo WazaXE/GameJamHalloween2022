@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Fredrik/Bana3.unity
     guid: e4b1db78c419e0049876a3910dc95888
+  - enabled: 1
+    path: Assets/Scenes/Morgan/EndScene.unity
+    guid: a074e7ea76a80924c9c762f0c8030a52
   m_configObjects: {}
