@@ -10547,7 +10547,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 513065767}
-  m_LocalRotation: {x: 0.0072981166, y: 0.8931044, z: -0.4495566, w: 0.0144986855}
+  m_LocalRotation: {x: 0.007298174, y: 0.8931044, z: -0.4495566, w: 0.014498799}
   m_LocalPosition: {x: -9.162478, y: 8, z: -5.002835}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -19305,7 +19305,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 939822649}
-  m_LocalRotation: {x: 0.0072981333, y: 0.8931044, z: -0.4495566, w: 0.01449872}
+  m_LocalRotation: {x: 0.0072981557, y: 0.8931044, z: -0.4495566, w: 0.014498763}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -21068,6 +21068,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 9013828269768456067, guid: 35f601a78143e2d44b4a70e50ae0ccc9,
+        type: 3}
+      propertyPath: maxCandy
+      value: 120
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 35f601a78143e2d44b4a70e50ae0ccc9, type: 3}
@@ -29923,7 +29928,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1403469283}
-  m_LocalRotation: {x: 0.00763392, y: 0.88238895, z: -0.47024074, w: 0.014324762}
+  m_LocalRotation: {x: 0.007633942, y: 0.8823889, z: -0.47024074, w: 0.014324799}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
