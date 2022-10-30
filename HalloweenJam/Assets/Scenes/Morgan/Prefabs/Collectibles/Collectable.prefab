@@ -61,7 +61,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   collectionSpeed: 2
   archHeight: 2
-  value: 10
+  value: 1
 --- !u!1 &6712326971789052002
 GameObject:
   m_ObjectHideFlags: 0
