@@ -13,11 +13,8 @@ public class PatrolBehavior : BehaviourBase
     private int pathDirection = 1;
 
     private CharacterAgent characterAgent;
-    private bool isActive;
 
-    void Update()
-    {
-        if (!isActive) return;
+    public override void UpdateBehaviour() {
         if(!characterAgent.AtDestination) return;
 
         GetNextPatrolPoint();
@@ -28,13 +25,11 @@ public class PatrolBehavior : BehaviourBase
         characterAgent = GetComponent<CharacterAgent>();
         GetClosesPatrolPoint();
         characterAgent.MoveTo(currentPatrolTarget);
-        isActive = true;
     }
 
     public override void EndBehaviour() {
         characterAgent.CancelCurrentCommand();
         characterAgent = null;
-        isActive = false;
     }
 
     private void GetClosesPatrolPoint() {

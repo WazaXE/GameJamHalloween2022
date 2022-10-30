@@ -6,5 +6,6 @@ using UnityEngine;
 public abstract class BehaviourBase : MonoBehaviour
 {
     public abstract void StartBehaviour();
+    public abstract void UpdateBehaviour();
     public abstract void EndBehaviour();
 }

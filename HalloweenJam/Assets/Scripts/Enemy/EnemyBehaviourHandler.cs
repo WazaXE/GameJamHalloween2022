@@ -11,6 +11,7 @@ public class EnemyBehaviourHandler : MonoBehaviour, ITarget, IVisionReport
     [SerializeField] private BehaviourBase attackBehaviour;
 
     private BehaviourBase activeBehaviour;
+    private bool isPaused;
 
     public Transform Position => transform;
     public Faction Faction => faction;
@@ -19,7 +20,15 @@ public class EnemyBehaviourHandler : MonoBehaviour, ITarget, IVisionReport
     {
         SwitchBehaviour(patrolBehaviour);
         DetectableTargetManager.Instance.RegisterTarget(this);
+        GameStateManager.Instance.OnGameStateChange += OnGameStateChange;
     }
+
+    private void Update() {
+        if(activeBehaviour != null) {
+            activeBehaviour.UpdateBehaviour();
+        }
+    }
+
     private void OnDestroy() {
         DetectableTargetManager.Instance.DeregisterTarget(this);
     }
@@ -47,9 +56,29 @@ public class EnemyBehaviourHandler : MonoBehaviour, ITarget, IVisionReport
     }
 
     private void SwitchBehaviour(BehaviourBase newBehaviour) {
-        if (newBehaviour == null || newBehaviour == activeBehaviour) return;
-        if(activeBehaviour != null) activeBehaviour.EndBehaviour();
+        if (isPaused) return;
+
+        if (newBehaviour == activeBehaviour) return;
+        if (activeBehaviour != null) {
+            activeBehaviour.EndBehaviour();
+        }
+
         activeBehaviour = newBehaviour;
-        activeBehaviour.StartBehaviour();
+        if (activeBehaviour != null) {
+            activeBehaviour.StartBehaviour();
+        }
+    }
+
+    private void OnGameStateChange(GameState newGameState) {
+        switch (newGameState) {
+            case GameState.Gameplay:
+                isPaused = false;
+                SwitchBehaviour(patrolBehaviour);
+                break;
+            case GameState.Paused:
+                SwitchBehaviour(null);
+                isPaused = true;
+                break;
+        }
     }
 }

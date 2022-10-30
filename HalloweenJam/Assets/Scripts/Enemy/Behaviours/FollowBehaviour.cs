@@ -10,19 +10,14 @@ public class FollowBehaviour : BehaviourBase
 {
     private CharacterAgent characterAgent;
     private Vision vision;
-    private bool isActive;
 
-    void Update()
-    {
-        if (!isActive) return;
-
+    public override void UpdateBehaviour() {
         characterAgent.MoveTo(vision.IdentifiedTarget.Position.position);
     }
 
     public override void StartBehaviour() {
         characterAgent = GetComponent<CharacterAgent>();
         vision = GetComponent<Vision>();
-        isActive = true;
     }
 
     public override void EndBehaviour() {
@@ -30,7 +25,6 @@ public class FollowBehaviour : BehaviourBase
 
         characterAgent = null;
         vision = null;
-        isActive = false;
 
     }
 }

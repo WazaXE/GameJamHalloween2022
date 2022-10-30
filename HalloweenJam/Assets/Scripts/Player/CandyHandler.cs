@@ -41,7 +41,14 @@ public class CandyHandler : MonoBehaviour
     }
 
     public void RemoveCandy(float amount) {
-        candyAmount -= amount;
+        if(candyAmount <= 0) return;
+
+        if(candyAmount - amount <= 0) {
+            candyAmount = 0;
+        }
+        else {
+            candyAmount -= amount;
+        }
         OnCandyAmountChange?.Invoke();
 
         if (candyAmount <= 0) {

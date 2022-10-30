@@ -10,14 +10,12 @@ public class AttackBehaviour : BehaviourBase
     private Vision vision;
     private IAttackable target;
     private bool canAttack;
-    private bool isActive;
 
     private void Start() {
         canAttack = true;
     }
 
-    private void Update() {
-        if (!isActive) return;
+    public override void UpdateBehaviour() {
         if (!canAttack) return;
         StartCoroutine(AttackCooldown());
         target.Attack(stealAmount);
@@ -26,15 +24,11 @@ public class AttackBehaviour : BehaviourBase
     public override void StartBehaviour() {
         vision = GetComponent<Vision>();
         target = (IAttackable)vision.IdentifiedTarget;
-
-        isActive = true;
     }
 
     public override void EndBehaviour() {
         vision = null;
         target = null;
-
-        isActive = false;
     }
 
     private IEnumerator AttackCooldown() {
