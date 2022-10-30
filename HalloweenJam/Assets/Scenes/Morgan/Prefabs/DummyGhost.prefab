@@ -4958,7 +4958,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   candyStealRate: 3
-  stealAmount: 5
+  stealAmount: 10
 --- !u!1 &7525057814477745571
 GameObject:
   m_ObjectHideFlags: 0
