@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Morgan/Preload.unity
+    guid: 2be262607b843634b8cdf0c62f6a0ac9
+  - enabled: 1
     path: Assets/Scenes/Morgan/MainMenu.unity
     guid: 6689a17c0a3449549bd9436199889df2
   - enabled: 1
